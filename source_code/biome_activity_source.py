@@ -742,7 +742,7 @@ class BiomePresence():
             
             # Check other biomes logs line
             for biome in self.biome_data:
-                if biome in line:
+                if f'"largeImage":{{"hoverText":"{biome}"' in line:
                     self.handle_biome_detection(biome, user_info)
                     return
                 
